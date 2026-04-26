@@ -1,6 +1,5 @@
 # HybridSN: 3D–2D CNN for Hyperspectral Image Classification
 
-![Project Banner or Result Preview](images/banner.png) <!-- Add a nice banner or a side-by-side Ground Truth vs Prediction image here -->
 
 This repository contains a high-performance implementation of HybridSN, a spectral-spatial 3D–2D CNN architecture designed for high-dimensional hyperspectral imagery (HSI) classification. The model effectively captures both local spatial patterns and spectral correlations, achieving state-of-the-art results on the Indian Pines dataset.
 
@@ -28,7 +27,6 @@ The architecture comprises three 3D convolutional layers followed by two 2D conv
 
 ## ⚙️ Preprocessing Workflow
 
-![PCA and Patch Extraction Visualization](images/preprocessing.png) <!-- Add an image showing the PCA reduction or patch extraction process -->
 
 The preprocessing pipeline is designed to reduce redundancy and prepare structured input for the hybrid network:
 
@@ -51,12 +49,12 @@ Through systematic hyperparameter tuning (Adam optimizer, `1e-3` learning rate, 
 ### Training Performance
 The model exhibits stable convergence with early stopping implemented to prevent overfitting.
 
-![Training Loss and Accuracy Graph](images/training_curves.png) <!-- Add your loss/accuracy plot here -->
+![Training Loss and Accuracy Graph](images/curves.png) <!-- Add your loss/accuracy plot here -->
 
 ### Classification Results
 The classified output demonstrates high fidelity to the ground truth with minimal noise in class boundaries.
 
-![Classification Map vs Ground Truth](images/classification_results.png) <!-- Highly recommend putting the predicted class map next to the ground truth map here -->
+![Classification Map vs Ground Truth](images/map.png) <!-- Highly recommend putting the predicted class map next to the ground truth map here -->
 
 ## 🛠 Requirements
 
