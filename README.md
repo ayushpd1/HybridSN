@@ -1,5 +1,7 @@
 # HybridSN: 3D–2D CNN for Hyperspectral Image Classification
 
+![Project Banner or Result Preview](images/banner.png) <!-- Add a nice banner or a side-by-side Ground Truth vs Prediction image here -->
+
 This repository contains a high-performance implementation of HybridSN, a spectral-spatial 3D–2D CNN architecture designed for high-dimensional hyperspectral imagery (HSI) classification. The model effectively captures both local spatial patterns and spectral correlations, achieving state-of-the-art results on the Indian Pines dataset.
 
 ## 📖 Project Overview
@@ -12,6 +14,8 @@ Developing effective classifiers for HSI is challenging due to the high dimensio
 
 ## 🧠 Model Architecture
 
+![HybridSN Architecture Diagram](images/architecture.png) <!-- Add your architecture diagram here -->
+
 The architecture comprises three 3D convolutional layers followed by two 2D convolutional layers, utilizing batch normalization and dropout for regularization.
 
 | Layer Type | Kernel Size | Filters | Description |
@@ -23,6 +27,8 @@ The architecture comprises three 3D convolutional layers followed by two 2D conv
 | **2D Conv 2** | (3, 3) | 64 | Final spatial feature mapping |
 
 ## ⚙️ Preprocessing Workflow
+
+![PCA and Patch Extraction Visualization](images/preprocessing.png) <!-- Add an image showing the PCA reduction or patch extraction process -->
 
 The preprocessing pipeline is designed to reduce redundancy and prepare structured input for the hybrid network:
 
@@ -45,8 +51,12 @@ Through systematic hyperparameter tuning (Adam optimizer, `1e-3` learning rate, 
 ### Training Performance
 The model exhibits stable convergence with early stopping implemented to prevent overfitting.
 
+![Training Loss and Accuracy Graph](images/training_curves.png) <!-- Add your loss/accuracy plot here -->
+
 ### Classification Results
 The classified output demonstrates high fidelity to the ground truth with minimal noise in class boundaries.
+
+![Classification Map vs Ground Truth](images/classification_results.png) <!-- Highly recommend putting the predicted class map next to the ground truth map here -->
 
 ## 🛠 Requirements
 
@@ -66,4 +76,3 @@ Follow the steps below to run the project pipelines:
    Run `Training.ipynb` to train the HybridSN model and save the best checkpoints.
 3. **Testing**:  
    Use `Testing.ipynb` to evaluate the model on the test set and generate performance metrics.
-
